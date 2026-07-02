@@ -244,7 +244,7 @@ class TestAPIAuthentication:
     def test_protected_endpoint_wrong_key_returns_401(self, client):
         """Protected endpoints should return 401 with wrong API key."""
         response = client.get("/psil/engagements",
-                              headers={"X-API-Key": "wrong-key-12345"})
+                              headers={"X-API-Key": "wrong-key-12345"})  # gitleaks:allow
         assert response.status_code == 401
 
     def test_protected_endpoint_correct_key_returns_200(self, client, api_key):
