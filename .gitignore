@@ -107,3 +107,8 @@ id_ed25519.pub
 shared/*
 !shared/__init__.py
 docs/scheduled-tasks.md
+
+# Pro engine + runtime — keep OUT of the public-linked repo (defense in depth)
+lmep/
+data/
+static/
