@@ -112,3 +112,4 @@ docs/scheduled-tasks.md
 lmep/
 data/
 static/
+gen_report.py

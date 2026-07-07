@@ -665,6 +665,13 @@ _PILA_HTML = """<!DOCTYPE html>
 </div>
 <main>
 <div id="msg"></div>
+<div class="card" id="onboard-banner" style="border:1px solid var(--accent);background:rgba(46,134,171,.08);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+  <div>
+    <div style="font-size:15px;font-weight:600;color:var(--accent)">👋 New here? Connect your Elasticsearch to start seeing your detections.</div>
+    <div style="font-size:12px;color:var(--muted);margin-top:2px">Reading your own detection data is free. Emulation, correlation, and scoring are Professional.</div>
+  </div>
+  <button class="btn" onclick="document.getElementById('es-settings').scrollIntoView({behavior:'smooth',block:'center'})">Connect Elasticsearch →</button>
+</div>
 <div class="grid3" style="margin-bottom:16px">
   <div class="card" style="text-align:center">
     <div style="font-size:28px;font-weight:700;color:var(--accent)" id="eng-count">-</div>
@@ -751,7 +758,7 @@ _PILA_HTML = """<!DOCTYPE html>
     <span class="lock-label">🔒 Automated correlation against emulations &amp; full scoring → Professional</span>
   </div>
 </div>
-<div class="card">
+<div class="card" id="es-settings">
   <h2>⚙ Settings — Data Source <span class="badge blue" style="margin-left:8px">FREE</span></h2>
   <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Point PILA at your Elasticsearch to see live detections above. Reading is free.</p>
   <div class="grid2">
@@ -775,7 +782,7 @@ _PILA_HTML = """<!DOCTYPE html>
   </div>
   <div style="margin-top:12px;display:flex;gap:8px">
     <button class="btn" onclick="saveSettings()">Save</button>
-    <button class="btn secondary" onclick="loadDetections()">Test Connection</button>
+    <button class="btn secondary" onclick="testConnection()">Test Connection</button>
   </div>
 </div>
 <div class="card pro-gate">
@@ -840,6 +847,14 @@ async function loadSettings(){
     document.getElementById('cfg-verify').checked=!!s.verify_ssl;
     document.getElementById('cfg-pw-state').textContent=s.password_set?'(set — blank keeps it)':'(not set)';
   }catch(e){console.error(e);}
+}
+async function testConnection(){
+  try{
+    const r=await fetch('/es/status',{headers:{'X-API-Key':API}});
+    const d=await r.json();
+    if(d.connected){toast('\u2713 Elasticsearch connected ('+(d.status||'ok')+')','success');}
+    else{toast('\u2717 Connection failed: '+(d.error||d.message||d.detail||'check host/credentials'),'error');}
+  }catch(e){toast('\u2717 Connection failed: '+e,'error');}
 }
 async function saveSettings(){
   const body={

@@ -67,6 +67,14 @@ class LMEPConfig:
         c = _load()["lmep"]
         self.post_emulation_wait   = int(c.get("post_emulation_wait_seconds", "15"))
         self.min_suricata_severity = int(c.get("min_suricata_severity", "3"))
+        # ACTIVE-mode governance: authorized target allowlist (CIDRs / IPs / hostnames,
+        # comma-separated). This is the customer's policy boundary for real traffic.
+        # DEFAULT IS EMPTY = DENY-ALL (fail-closed): ACTIVE refuses every target until
+        # the operator explicitly authorizes ranges in pila.conf.
+        raw = c.get("active_authorized_targets", "").strip()
+        self.active_authorized_targets = [x.strip() for x in raw.split(",") if x.strip()]
+        # Hard master switch: ACTIVE mode is OFF unless explicitly enabled (belt and braces).
+        self.active_mode_enabled = c.get("active_mode_enabled", "false").strip().lower() in ("1","true","yes","on")
 
 
 class IRVConfig:
