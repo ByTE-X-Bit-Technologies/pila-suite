@@ -1,7 +1,7 @@
-# PILA Suite — Community vs Professional
+# PILA Suite — Community vs Paid Tiers
 
 > **© 2026 ByTE X Bit Technologies LLC — Patent Pending**
-> Full platform details at [pilasuit.com](https://pilasuit.com)
+> Full platform details at [byte-x-bit.com](https://byte-x-bit.com)
 
 ---
 
@@ -71,9 +71,9 @@ PSIL engagements are the input that feeds every other PILA module. They are also
 
 ---
 
-### Professional Edition — $149/month
+### Paid Tiers (Essentials / Full / Enterprise)
 
-The Professional Edition delivers the full PILA Suite platform. It includes all Community features plus the four proprietary engines that power the platform's core value: automated emulation, live detection correlation, remediation validation, and quantitative scoring.
+The paid tiers deliver the full PILA Suite platform. They include all Community features plus the proprietary engines that power the platform's core value: automated emulation, live detection correlation, remediation validation, and quantitative scoring. See [byte-x-bit.com](https://byte-x-bit.com) for the full plan comparison and current pricing.
 
 **What you get — everything in Community, plus:**
 
@@ -134,12 +134,12 @@ IRV validates whether a remediation action actually eradicated a threat — usin
 1. After remediating an incident, you trigger an IRV validation job with the incident ID, incident type, and affected host scope
 2. IRV runs a structured playbook of validation checks against live Elasticsearch data for the affected hosts
 3. IRV checks for the absence of active Suricata alerts, malicious connection patterns, and known indicator signatures in the configured time window
-4. IRV produces a timestamped, cryptographically signed evidence bundle documenting the validation result
+4. IRV produces a timestamped, SHA-256 hash-chained evidence bundle documenting the validation result
 
 **Key capabilities:**
 - **7 incident type playbooks** — malware, credential compromise, ransomware, lateral movement, data exfiltration, phishing, insider threat. Each playbook runs checks specific to that incident category.
 - **Live ES host cleanliness check** — queries Elasticsearch in real time to confirm a host shows no active alert indicators in the configured lookback window
-- **Cryptographic evidence bundle** — each validation produces a signed bundle with a unique hash that serves as documented sign-off for compliance and audit purposes
+- **Tamper-evident evidence bundle** — each validation produces a hash-chained bundle with a unique SHA-256 fingerprint that serves as a documented, integrity-protected record for audit purposes
 - **Job queue** — multiple IRV validations can run concurrently across different hosts and incident types
 
 **Professional IRV endpoints:**
@@ -244,8 +244,8 @@ The dashboard includes a live ATT&CK coverage heatmap that visualizes detection 
 **Community Edition** — Apache 2.0
 The PSIL SDK, community API server, and open interfaces are licensed under Apache 2.0 and free to use, modify, and distribute.
 
-**Professional Edition** — Commercial License
-The AESP scoring engine, LMEP emulation engine, IRV orchestration engine, and live ES correlation layer are proprietary and Patent Pending. A Professional license is required to use these features.
+**Paid Tiers** — Commercial License
+The AESP scoring engine, LMEP emulation engine, IRV orchestration engine, and live ES correlation layer are proprietary and Patent Pending. A paid license is required to use these features.
 
 **Activating Professional:**
 ```bash
@@ -254,7 +254,7 @@ python3 activate.py PILA-XXXX-XXXX-XXXX-XXXX
 
 The activation script validates your key, writes it to `pila.conf`, and restarts PILA Suite automatically.
 
-Purchase a license at **[pilasuit.com](https://pilasuit.com)**
+Learn more at **[byte-x-bit.com](https://byte-x-bit.com)**
 
 ---
 
