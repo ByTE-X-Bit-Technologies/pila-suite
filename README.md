@@ -10,8 +10,8 @@
 The **ByTE X Bit Platform** is an integrated security automation platform from
 [ByTE X Bit Technologies LLC](https://byte-x-bit.com). It emulates attacks,
 watches and contains them, tracks detection coverage as it drifts over time,
-and rolls every result into a single cryptographically-attested security
-posture score.
+and rolls every result into a single security posture score, backed by a
+SHA-256 hash-chained, tamper-evident evidence ledger.
 
 This is the **Community Edition** — fully open source under Apache 2.0.
 
@@ -26,7 +26,7 @@ Most security tools generate more data. This one generates **evidence**.
 
 In a real SOC you end up asking the same question every quarter: *can we
 actually prove our defenses work?* This platform exists to answer that with
-signed, defensible artifacts instead of dashboards and assertions. It was
+hash-chained, tamper-evident artifacts instead of dashboards and assertions. It was
 designed and built in a production-grade home lab running real Elasticsearch,
 Suricata, Zeek, Wazuh, and Sysmon telemetry — and battle-tested against live
 attack emulation before it shipped.
@@ -41,7 +41,7 @@ backbone:
 | **PILA** | Purple Team | Run, emulate, and **score** purple-team exercises against your live detection stack — quantifies effectiveness on a 0–100 scale and a Defense Maturity Tier |
 | **CODE** | Blue Team | Monitors detection-rule health hourly, enriches every alert with threat intel, ranks containment actions, and seals IR evidence into a SHA-256 chain |
 | **GHOST** | Coverage | Tracks ATT&CK detection coverage as it drifts over time, computes a Detection Debt Score and Coverage Maturity Level |
-| **SENTINEL** | Risk & Trust | Turns validation evidence into a cryptographically-attested trust score with letter-grade ratings — built on append-only, signed evidence |
+| **SENTINEL** | Risk & Trust | Turns validation evidence into a trust score with letter-grade ratings — backed by an append-only, SHA-256 hash-chained evidence ledger |
 
 Inside each product:
 
@@ -227,12 +227,12 @@ open source under Apache 2.0. The Community Edition includes:
 - ✓ Full API read access
 - ✓ Self-hosted, no license key required
 
-The **Professional Edition** ($149 / month) adds the full automation and
+The **paid tiers** add the full automation and
 live-correlation engines — full PILA modules, CODE blue-team operations,
 GHOST sync & regression detection, SENTINEL evidence submission, the live
 ATT&CK heatmap, API write access, and ES integration. See
-[pricing](https://byte-x-bit.com/#pricing) for the full plan comparison
-(Community / Professional / Team / Enterprise).
+[byte-x-bit.com](https://byte-x-bit.com) for the full plan comparison
+(Community / Essentials / Full / Enterprise) and current pricing.
 
 The proprietary scoring algorithms and detection engines are not in this
 repository.
@@ -262,7 +262,7 @@ This is an early-stage independent project. Support is best-effort.
 - **Bug reports / feature requests:** open a GitHub issue
 - **Security disclosures:** bryant@byte-x-bit.com (do **not** open a public
   issue for vulnerabilities)
-- **Commercial / Professional inquiries:** bryant@byte-x-bit.com
+- **Commercial inquiries:** bryant@byte-x-bit.com
 - **Website:** [byte-x-bit.com](https://byte-x-bit.com)
 
 ---
