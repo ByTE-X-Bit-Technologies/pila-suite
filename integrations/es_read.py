@@ -1,5 +1,5 @@
 """
-PILA Suite — Community Elasticsearch Read Client
+PILA — Community Elasticsearch Read Client
 © 2026 ByTE X Bit Technologies LLC
 
 Read-only ES access for the Community (free) tier: connect to your existing

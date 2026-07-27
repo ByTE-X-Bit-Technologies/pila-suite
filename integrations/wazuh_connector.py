@@ -1,5 +1,5 @@
 """
-PILA Suite — Wazuh Connector
+PILA — Wazuh Connector
 Queries the Wazuh Indexer directly for HIDS alerts, agent status,
 and host cleanliness checks.
 
@@ -139,7 +139,7 @@ def _norm_alert(h: dict) -> dict:
 
 class WazuhConnector:
     """
-    PILA Suite connector for Wazuh HIDS.
+    PILA connector for Wazuh HIDS.
 
     Queries the Wazuh Indexer (OpenSearch-compatible) for:
       - HIDS alerts by agent IP, rule group, severity level, and time window

@@ -1,5 +1,5 @@
 """
-PILA Suite — Winlogbeat / Sysmon Connector
+PILA — Winlogbeat / Sysmon Connector
 Queries Windows Event Logs shipped via Winlogbeat to Elasticsearch.
 
 Adds endpoint-level Windows visibility that network-based tools cannot provide:
@@ -224,7 +224,7 @@ def _norm_event(h: dict) -> dict:
 
 class WinlogbeatConnector:
     """
-    PILA Suite connector for Windows Event Logs via Winlogbeat.
+    PILA connector for Windows Event Logs via Winlogbeat.
 
     Supports both standard Windows Security events and Sysmon-enriched events.
     Sysmon events are automatically detected and labeled — no separate

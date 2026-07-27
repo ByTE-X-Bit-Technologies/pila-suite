@@ -1,9 +1,9 @@
 """
-PILA Suite — Live Scoring
+PILA — Live Scoring
 © 2026 ByTE X Bit Technologies LLC — Patent Pending
 
-Live scoring functionality requires PILA Suite Professional.
+Live scoring functionality requires PILA Professional.
 Visit pilasuit.com to upgrade.
 """
-print("Live scoring requires PILA Suite Professional.")
+print("Live scoring requires PILA Professional.")
 print("Visit pilasuit.com to upgrade.")

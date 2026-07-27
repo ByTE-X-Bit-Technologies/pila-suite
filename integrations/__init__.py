@@ -1,4 +1,4 @@
-"""PILA Suite — Live Network Integrations"""
+"""PILA — Live Network Integrations"""
 
 # Community (open-core) tree does NOT ship the proprietary ES client or the
 # Pro config dataclasses. Import them optionally so the package loads in the

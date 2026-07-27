@@ -1,5 +1,5 @@
 """
-PILA Suite — Splunk Enterprise Connector
+PILA — Splunk Enterprise Connector
 © 2026 ByTE X Bit Technologies LLC — Patent Pending
 
 Queries Splunk Enterprise via REST API for security alerts,
@@ -349,7 +349,7 @@ class SplunkConnector:
                    index: str = None) -> dict:
         """
         Send an event to Splunk via HEC.
-        Used for testing and for PILA Suite audit logging.
+        Used for testing and for PILA audit logging.
         """
         if not self.hec_token:
             return {"success": False, "error": "No HEC token configured"}

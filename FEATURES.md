@@ -1,13 +1,13 @@
-# PILA Suite — Community vs Paid Tiers
+# PILA — Community vs Paid Tiers
 
 > **© 2026 ByTE X Bit Technologies LLC — Patent Pending**
 > Full platform details at [byte-x-bit.com](https://byte-x-bit.com)
 
 ---
 
-## What PILA Suite Is
+## What PILA Is
 
-PILA Suite is a purple team automation platform that measures, documents, and improves detection capability across a security stack. It connects to your live Elasticsearch environment and provides a unified workflow for running adversary simulations, validating incident remediations, and scoring your detection program — all from a single dashboard.
+PILA is a purple team automation platform that measures, documents, and improves detection capability across a security stack. It connects to your live Elasticsearch environment and provides a unified workflow for running adversary simulations, validating incident remediations, and scoring your detection program — all from a single dashboard.
 
 The platform is built around four integrated modules. Each module handles a distinct phase of the purple team engagement lifecycle:
 
@@ -24,7 +24,7 @@ AESP → score the defense
 
 ### Community Edition — Free
 
-The Community Edition is open source (Apache 2.0) and provides the foundational layer of the PILA Suite platform. It is designed for security engineers and researchers who want to structure and document their purple team work using an open, machine-readable format.
+The Community Edition is open source (Apache 2.0) and provides the foundational layer of the PILA platform. It is designed for security engineers and researchers who want to structure and document their purple team work using an open, machine-readable format.
 
 **What you get:**
 
@@ -73,7 +73,7 @@ PSIL engagements are the input that feeds every other PILA module. They are also
 
 ### Paid Tiers (Essentials / Full / Enterprise)
 
-The paid tiers deliver the full PILA Suite platform. They include all Community features plus the proprietary engines that power the platform's core value: automated emulation, live detection correlation, remediation validation, and quantitative scoring. See [byte-x-bit.com](https://byte-x-bit.com) for the full plan comparison and current pricing.
+The paid tiers deliver the full PILA platform. They include all Community features plus the proprietary engines that power the platform's core value: automated emulation, live detection correlation, remediation validation, and quantitative scoring. See [byte-x-bit.com](https://byte-x-bit.com) for the full plan comparison and current pricing.
 
 **What you get — everything in Community, plus:**
 
@@ -180,7 +180,7 @@ AESP translates purple team engagement outcomes into a quantitative Effectivenes
 
 #### Live Elasticsearch Integration *(Professional)*
 
-The live ES integration layer connects PILA Suite to your Suricata, Zeek, and Filebeat indices and powers real-time detection correlation across LMEP and IRV.
+The live ES integration layer connects PILA to your Suricata, Zeek, and Filebeat indices and powers real-time detection correlation across LMEP and IRV.
 
 **Capabilities:**
 - **Suricata alert queries** — query recent alerts by source IP, destination IP, and time window. Returns signature names, severity, and endpoint pairs.
@@ -252,11 +252,11 @@ The AESP scoring engine, LMEP emulation engine, IRV orchestration engine, and li
 python3 activate.py PILA-XXXX-XXXX-XXXX-XXXX
 ```
 
-The activation script validates your key, writes it to `pila.conf`, and restarts PILA Suite automatically.
+The activation script validates your key, writes it to `pila.conf`, and restarts PILA automatically.
 
 Learn more at **[byte-x-bit.com](https://byte-x-bit.com)**
 
 ---
 
 *© 2026 ByTE X Bit Technologies LLC — Patent Pending*
-*PILA Suite, PSIL, LMEP, IRV, and AESP are trademarks of ByTE X Bit Technologies LLC*
+*PILA, PSIL, LMEP, IRV, and AESP are trademarks of ByTE X Bit Technologies LLC*

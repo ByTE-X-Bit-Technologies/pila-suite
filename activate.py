@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-PILA Suite — License Activation
+PILA — License Activation
 Usage:
   python3 activate.py PILA-XXXX-XXXX-XXXX-XXXX
 
 What it does:
   1. Validates the key against the license API
   2. Writes the key to pila.conf [license] section
-  3. Optionally restarts PILA Suite
+  3. Optionally restarts PILA
 
 Run from anywhere — it finds pila.conf automatically.
 """
@@ -103,7 +103,7 @@ def write_key_to_conf(conf_path: Path, key: str) -> None:
     print(f"  Backup saved: {backup}")
 
 def restart_pila(pila_root: Path) -> bool:
-    """Attempt to restart PILA Suite using stop.sh / start.sh."""
+    """Attempt to restart PILA using stop.sh / start.sh."""
     stop  = pila_root / "stop.sh"
     start = pila_root / "start.sh"
     if not stop.exists() or not start.exists():
@@ -125,7 +125,7 @@ def dim(s):   return f"\033[2m{s}\033[0m"
 def print_banner():
     print()
     print(bold("  ╔══════════════════════════════════════════╗"))
-    print(bold("  ║         PILA Suite Activation            ║"))
+    print(bold("  ║             PILA Activation              ║"))
     print(bold("  ║  Purple Intelligence & Lifecycle Auto    ║"))
     print(bold("  ╚══════════════════════════════════════════╝"))
     print()
@@ -154,7 +154,7 @@ def main():
     if len(sys.argv) >= 2:
         key = sys.argv[1].strip().upper()
     else:
-        print("  Enter your PILA Suite license key:")
+        print("  Enter your PILA license key:")
         print(dim("  Format: PILA-XXXX-XXXX-XXXX-XXXX"))
         print()
         key = input("  Key: ").strip().upper()
@@ -215,7 +215,7 @@ def main():
 
     # ── Offer to restart ─────────────────────────────────────────────────────
     if pila_root:
-        print("  Restart PILA Suite now to activate? [Y/n] ", end="", flush=True)
+        print("  Restart PILA now to activate? [Y/n] ", end="", flush=True)
         try:
             answer = input().strip().lower()
         except (EOFError, KeyboardInterrupt):
@@ -223,21 +223,21 @@ def main():
 
         if answer in ("", "y", "yes"):
             print()
-            print("  Restarting PILA Suite...")
+            print("  Restarting PILA...")
             ok = restart_pila(pila_root)
             if ok:
-                print(green("  ✓ PILA Suite restarted."))
+                print(green("  ✓ PILA restarted."))
                 print(dim("  Open http://localhost:8000/ to confirm Professional tier is active."))
             else:
                 print("  Could not auto-restart. Restart manually:")
                 print(dim(f"    cd {pila_root} && ./stop.sh && ./start.sh"))
         else:
             print()
-            print("  Restart PILA Suite to activate your license:")
+            print("  Restart PILA to activate your license:")
             print(dim(f"    cd {pila_root} && ./stop.sh && ./start.sh"))
 
     print()
-    print(bold("  Activation complete. Welcome to PILA Suite Professional."))
+    print(bold("  Activation complete. Welcome to PILA Professional."))
     print()
 
 

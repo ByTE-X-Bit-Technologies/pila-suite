@@ -1,6 +1,6 @@
 """
 PSIL - Purple Structured Intelligence Language SDK v1.0.0
-Apache 2.0 License - PILA Suite
+Apache 2.0 License - PILA
 """
 from .models import (
     Engagement, Scenario, Attack, Defense, Outcome, Metrics,

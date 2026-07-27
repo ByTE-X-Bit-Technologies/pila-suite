@@ -1,5 +1,5 @@
 """
-PILA Suite — Test Suite
+PILA — Test Suite
 © 2026 ByTE X Bit Technologies LLC
 
 Tests covering:

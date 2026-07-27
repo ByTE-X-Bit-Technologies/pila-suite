@@ -1,4 +1,4 @@
-# PILA Suite — Usage Guide (Community Edition)
+# PILA — Usage Guide (Community Edition)
 
 > **© 2026 ByTE X Bit Technologies LLC — Patent Pending**
 > Community Edition · Apache 2.0
@@ -7,7 +7,7 @@
 
 ## Overview
 
-PILA Suite Community Edition gives you the PSIL engagement documentation framework and the detection connector library. This guide covers everything available without a Professional license.
+PILA Community Edition gives you the PSIL engagement documentation framework and the detection connector library. This guide covers everything available without a Professional license.
 
 For Professional Edition features (LMEP emulation, IRV validation, AESP scoring, ATT&CK heatmap), see the Professional Setup Guide available with your license at **byte-x-bit.com**.
 

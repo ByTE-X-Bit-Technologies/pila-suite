@@ -1,5 +1,5 @@
 """
-PILA Suite — Integration Config Loader
+PILA — Integration Config Loader
 Reads pila.conf and exposes typed config objects.
 """
 import configparser

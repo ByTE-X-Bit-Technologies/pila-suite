@@ -1,5 +1,5 @@
 """
-PILA Suite — Elastic Security Connector
+PILA — Elastic Security Connector
 Queries Elastic Security detection alerts from Elasticsearch.
 
 Elastic Security adds pre-built ATT&CK-mapped detection rules that
@@ -160,7 +160,7 @@ def _norm_alert(h: dict) -> dict:
 
 class ElasticSecurityConnector:
     """
-    PILA Suite connector for Elastic Security detection alerts.
+    PILA connector for Elastic Security detection alerts.
 
     Queries .alerts-security* indices for:
       - Detection rule alerts with full ATT&CK mappings

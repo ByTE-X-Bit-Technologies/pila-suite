@@ -1,4 +1,4 @@
-# PILA Suite — Installation Guide
+# PILA — Installation Guide
 
 > **© 2026 ByTE X Bit Technologies LLC — Patent Pending**
 > Community Edition (Apache 2.0) and Professional Edition setup
@@ -27,7 +27,7 @@
 
 ## Network Placement
 
-PILA Suite is a **central server component** — not an endpoint agent. Deploy it on one Linux host with network access to your Elasticsearch instance.
+PILA is a **central server component** — not an endpoint agent. Deploy it on one Linux host with network access to your Elasticsearch instance.
 
 ```
 Your network
@@ -37,13 +37,13 @@ Your network
 │   └── Suricata + Zeek → ship via Filebeat → Elasticsearch
 ├── Elasticsearch (your existing instance)
 │   └── Stores all telemetry from all sources
-└── PILA Suite (this installation)
+└── PILA (this installation)
     └── Queries Elasticsearch
     └── Runs emulation against scoped targets
     └── Scores and documents the detection program
 ```
 
-PILA Suite does NOT need to be installed on the same host as Elasticsearch. It communicates via HTTPS on port 9200.
+PILA does NOT need to be installed on the same host as Elasticsearch. It communicates via HTTPS on port 9200.
 
 ---
 
@@ -114,13 +114,13 @@ Connected: {'connected': True, 'cluster_name': 'your-cluster', 'status': 'green'
 
 ---
 
-## Step 5 — Start PILA Suite
+## Step 5 — Start PILA
 
 ```bash
 ./start.sh
 ```
 
-PILA Suite starts on port 8000. Verify it is running:
+PILA starts on port 8000. Verify it is running:
 
 ```bash
 curl -s http://localhost:8000/health | python3 -m json.tool
@@ -130,7 +130,7 @@ Expected output:
 ```json
 {
     "status": "ok",
-    "suite": "PILA Suite v1.0.0",
+    "suite": "PILA v1.0.0",
     "components": {
         "psil": "online",
         "aesp": "online",
@@ -156,7 +156,7 @@ http://YOUR_SERVER_IP:8000/docs
 
 ---
 
-## Stopping PILA Suite
+## Stopping PILA
 
 ```bash
 ./stop.sh
@@ -166,12 +166,12 @@ http://YOUR_SERVER_IP:8000/docs
 
 ## Running as a systemd service (optional)
 
-To have PILA Suite start automatically on boot:
+To have PILA start automatically on boot:
 
 ```bash
 sudo tee /etc/systemd/system/pila-suite.service << 'EOF'
 [Unit]
-Description=PILA Suite — Purple Team Platform
+Description=PILA — Purple Team Platform
 After=network.target
 
 [Service]
@@ -212,7 +212,7 @@ pip install -r requirements.txt
 **Professional Edition** adds three additional suites beyond PILA:
 - **GHOST** — gap analysis and operational simulation tracking
 - **SENTINEL** — security evidence scoring
-- **CODE Suite** — continuous detection engineering
+- **CODE** — continuous detection engineering
 
 Plus full LMEP (real lateral movement emulation), IRV (incident remediation validation), full AESP scoring with ATT&CK Heatmap, and access to all Professional-tier APIs documented at `/docs`.
 

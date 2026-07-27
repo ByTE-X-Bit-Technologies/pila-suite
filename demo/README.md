@@ -10,7 +10,7 @@ of landing the user on empty screens.
 |------|---------|------|
 | `sample_data/engagements.json` | 5 PSIL engagements | 8765 bytes |
 
-That single file populates the PILA Suite dashboard with five realistic
+That single file populates the PILA dashboard with five realistic
 purple-team engagements documenting a fictional "Demo SOC (synthetic)"
 organization onboarding the platform over a six-week period. Each
 engagement includes ATT&CK technique mappings, scenario outcomes,
@@ -44,10 +44,10 @@ something to copy from.
 ## What Community Edition does NOT show
 
 The platform has additional products (LMEP behavioral emulation, IRV
-remediation validation, the CODE Suite for detection-rule monitoring,
+remediation validation, the CODE for detection-rule monitoring,
 GHOST for ATT&CK coverage tracking, SENTINEL for posture scoring with
 cryptographic evidence chains) that are part of the Professional
-Edition. Community Edition currently exposes only the PILA Suite, so
+Edition. Community Edition currently exposes only the PILA, so
 this demo dataset is scoped to what Community can actually display.
 
 Future Community Edition releases may expand what's shown here as more

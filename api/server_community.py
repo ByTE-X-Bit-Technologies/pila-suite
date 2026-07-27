@@ -1,5 +1,5 @@
 """
-PILA Suite — Community Edition Server
+PILA — Community Edition Server
 Purple Intelligence & Lifecycle Automation
 
 This is the open-source community server. It provides:
@@ -10,7 +10,7 @@ This is the open-source community server. It provides:
 - Clean upgrade paths to Professional Edition
 
 Professional Edition adds: LMEP emulation, IRV validation, live ES
-correlation, CODE Suite (DRIFT/OBSERVER/CHAIN/EVIDENCE), GHOST sync,
+correlation, CODE (DRIFT/OBSERVER/CHAIN/EVIDENCE), GHOST sync,
 SENTINEL evidence submission, report generation, and more.
 
 License: Apache 2.0
@@ -650,7 +650,7 @@ _PILA_HTML = """<!DOCTYPE html>
 </head>
 <body>
 <header>
-  <h1>⚔ PILA Suite</h1>
+  <h1>⚔ PILA</h1>
   <span style="color:var(--muted);font-size:12px">Purple Intelligence &amp; Lifecycle Automation · Community Edition</span>
   <span style="margin-left:auto;display:flex;gap:12px">
     <a href="/ghost" class="suite-link">👻 GHOST</a>
@@ -788,7 +788,7 @@ _PILA_HTML = """<!DOCTYPE html>
 <div class="card pro-gate">
   <div style="font-size:32px;margin-bottom:8px">🔒</div>
   <h3 style="color:var(--yellow);font-size:14px">Professional Edition Features</h3>
-  <p style="color:var(--muted);font-size:13px;margin:8px 0">LMEP adversary emulation · IRV incident validation · Live Elasticsearch correlation · CODE Suite (DRIFT/OBSERVER/CHAIN/EVIDENCE) · GHOST coverage tracking · SENTINEL vendor scoring · Full AESP with historical trending · ATT&CK heatmap · Report generation</p>
+  <p style="color:var(--muted);font-size:13px;margin:8px 0">LMEP adversary emulation · IRV incident validation · Live Elasticsearch correlation · CODE (DRIFT/OBSERVER/CHAIN/EVIDENCE) · GHOST coverage tracking · SENTINEL vendor scoring · Full AESP with historical trending · ATT&CK heatmap · Report generation</p>
   <a href="https://byte-x-bit.com"><button class="btn pro" style="margin-top:12px">Upgrade to Professional — $149/month</button></a>
 </div>
 </main>
