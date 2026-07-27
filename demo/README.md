@@ -43,12 +43,12 @@ something to copy from.
 
 ## What Community Edition does NOT show
 
-The platform has additional products (LMEP behavioral emulation, IRV
-remediation validation, CODE for detection-rule monitoring,
-GHOST for ATT&CK coverage tracking, SENTINEL for posture scoring with
-cryptographic evidence chains) that are part of the Professional
-Edition. Community Edition currently exposes only the PILA, so
-this demo dataset is scoped to what Community can actually display.
+The platform has three additional products — CODE (detection-rule
+monitoring), GHOST (ATT&CK coverage tracking), and SENTINEL (posture
+scoring with cryptographic evidence chains) — that are part of the
+Professional Edition, along with PILA's LMEP and IRV modules.
+Community Edition exposes a subset of PILA only, so this demo dataset
+is scoped to what Community can actually display.
 
 Future Community Edition releases may expand what's shown here as more
 capability moves into the free tier.
