@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ============================================================
-# PILA Suite — Home Server Startup Script (venv-aware)
+# PILA — Home Server Startup Script (venv-aware)
 # ============================================================
 set -e
 
@@ -42,7 +42,7 @@ if [ -n "$existing" ]; then
     sleep 1
 fi
 
-echo "→ Starting PILA Suite on $HOST:$PORT ..."
+echo "→ Starting PILA on $HOST:$PORT ..."
 export PYTHONPATH="$SCRIPT_DIR"
 cd "$SCRIPT_DIR"
 
@@ -68,7 +68,7 @@ else
 
     if kill -0 $PID 2>/dev/null; then
         echo ""
-        echo "✓ PILA Suite is running (PID: $PID)"
+        echo "✓ PILA is running (PID: $PID)"
         echo ""
         echo "  Dashboard:  http://localhost:$PORT/"
         echo "  API Docs:   http://localhost:$PORT/docs"

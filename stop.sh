@@ -6,7 +6,7 @@ if [ -f "$PID_FILE" ]; then
     if kill -0 $PID 2>/dev/null; then
         kill $PID
         rm "$PID_FILE"
-        echo "✓ PILA Suite stopped (PID $PID)"
+        echo "✓ PILA stopped (PID $PID)"
     else
         echo "Process $PID not running. Cleaning up PID file."
         rm "$PID_FILE"
@@ -17,6 +17,6 @@ else
     if [ -n "$PID" ]; then
         kill $PID && echo "✓ Stopped process on port 8000 (PID $PID)"
     else
-        echo "PILA Suite does not appear to be running."
+        echo "PILA does not appear to be running."
     fi
 fi
