@@ -44,7 +44,7 @@ something to copy from.
 ## What Community Edition does NOT show
 
 The platform has additional products (LMEP behavioral emulation, IRV
-remediation validation, the CODE for detection-rule monitoring,
+remediation validation, CODE for detection-rule monitoring,
 GHOST for ATT&CK coverage tracking, SENTINEL for posture scoring with
 cryptographic evidence chains) that are part of the Professional
 Edition. Community Edition currently exposes only the PILA, so
