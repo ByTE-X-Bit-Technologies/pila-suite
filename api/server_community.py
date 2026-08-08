@@ -644,6 +644,11 @@ _PILA_HTML = """<!DOCTYPE html>
   .alert.info{background:rgba(46,134,171,.1);border:1px solid rgba(46,134,171,.3);color:var(--accent)}
   #msg{position:fixed;top:20px;right:20px;z-index:999;min-width:240px}
   .suite-link{color:var(--muted);font-size:12px;text-decoration:none;padding:4px 10px;border:1px solid var(--border);border-radius:4px}
+  .plat-brand{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--text);
+    letter-spacing:.02em;padding-right:14px;margin-right:4px;border-right:1px solid var(--border)}
+  .plat-brand .glyph{color:var(--accent);font-weight:800}
+  .suite-link.locked{opacity:.5;cursor:default;position:relative}
+  .suite-link.cur{color:var(--text);border-color:var(--accent)}
   .suite-link:hover{color:var(--text)}
   .pro-gate{background:rgba(210,153,34,.05);border:1px dashed rgba(210,153,34,.3);border-radius:8px;padding:16px;text-align:center}
 </style>
@@ -652,7 +657,10 @@ _PILA_HTML = """<!DOCTYPE html>
 <header>
   <h1>⚔ PILA</h1>
   <span style="color:var(--muted);font-size:12px">Purple Intelligence &amp; Lifecycle Automation · Community Edition</span>
-  <span style="margin-left:auto;display:flex;gap:12px">
+  <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
+    <span class="plat-brand">ByTE X Bit Platform</span>
+    <a href="/pila" class="suite-link cur">⚔ PILA</a>
+    <span class="suite-link locked" title="CODE is a Professional module">🔒 CODE</span>
     <a href="/ghost" class="suite-link">👻 GHOST</a>
     <a href="/sentinel" class="suite-link">🔒 SENTINEL</a>
   </span>
@@ -787,9 +795,10 @@ _PILA_HTML = """<!DOCTYPE html>
 </div>
 <div class="card pro-gate">
   <div style="font-size:32px;margin-bottom:8px">🔒</div>
-  <h3 style="color:var(--yellow);font-size:14px">Professional Edition Features</h3>
-  <p style="color:var(--muted);font-size:13px;margin:8px 0">LMEP adversary emulation · IRV incident validation · Live Elasticsearch correlation · CODE (DRIFT/OBSERVER/CHAIN/EVIDENCE) · GHOST coverage tracking · SENTINEL vendor scoring · Full AESP with historical trending · ATT&CK heatmap · Report generation</p>
-  <a href="https://byte-x-bit.com"><button class="btn pro" style="margin-top:12px">Upgrade to Professional — $149/month</button></a>
+  <h3 style="color:var(--yellow);font-size:14px">What Professional adds</h3>
+  <p style="color:var(--text);font-size:14px;font-weight:600;margin:8px 0" id="pila-gap-line">Community scores your engagements read-only.</p>
+  <p style="color:var(--muted);font-size:13px;margin:8px 0">Professional runs LMEP adversary emulation, correlates results against your live detection stack, and produces the full AESP score — coverage breadth, response speed, remediation quality. Plus IRV incident validation, CODE (DRIFT/OBSERVER/CHAIN/EVIDENCE), the ATT&CK heatmap, and report generation.</p>
+  <a href="https://byte-x-bit.com"><button class="btn pro" style="margin-top:12px">Unlock full PILA →</button></a>
 </div>
 </main>
 <script>
@@ -982,14 +991,22 @@ _GHOST_HTML = """<!DOCTYPE html>
   .badge.green{background:rgba(63,185,80,.15);color:var(--green)}
   .pro-gate{background:rgba(139,92,246,.05);border:1px dashed rgba(139,92,246,.3);border-radius:8px;padding:16px;text-align:center;margin-top:16px}
   .suite-link{color:var(--muted);font-size:12px;text-decoration:none;padding:4px 10px;border:1px solid var(--border);border-radius:4px}
+  .plat-brand{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--text);
+    letter-spacing:.02em;padding-right:14px;margin-right:4px;border-right:1px solid var(--border)}
+  .plat-brand .glyph{color:var(--accent);font-weight:800}
+  .suite-link.locked{opacity:.5;cursor:default;position:relative}
+  .suite-link.cur{color:var(--text);border-color:var(--accent)}
 </style>
 </head>
 <body>
 <header>
   <h1>👻 GHOST</h1>
   <span style="color:var(--muted);font-size:12px">Gap Heatmap &amp; Operational Simulation Tracker · Community</span>
-  <span style="margin-left:auto;display:flex;gap:12px">
+  <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
+    <span class="plat-brand">ByTE X Bit Platform</span>
     <a href="/pila" class="suite-link">⚔ PILA</a>
+    <span class="suite-link locked" title="CODE is a Professional module">🔒 CODE</span>
+    <a href="/ghost" class="suite-link cur">👻 GHOST</a>
     <a href="/sentinel" class="suite-link">🔒 SENTINEL</a>
   </span>
 </header>
@@ -1012,8 +1029,9 @@ _GHOST_HTML = """<!DOCTYPE html>
 </div>
 <div class="pro-gate">
   <div style="font-size:32px;margin-bottom:8px">🔒</div>
-  <p style="color:var(--muted);font-size:13px">GHOST sync from PSIL + DRIFT, regression detection, coverage timeline, and alert management require Professional Edition.</p>
-  <a href="https://byte-x-bit.com"><button style="background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;margin-top:8px">Upgrade to Professional</button></a>
+  <p style="color:var(--text);font-size:14px;font-weight:600;margin-bottom:6px" id="ghost-gap-line">Community shows you where your coverage stands.</p>
+  <p style="color:var(--muted);font-size:13px">Professional shows <b>which detections are failing</b> on each technique, tracks coverage as it drifts over time, and flags the moment a working detection silently regresses.</p>
+  <a href="https://byte-x-bit.com"><button style="background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;margin-top:8px">Unlock full GHOST →</button></a>
 </div>
 </main>
 <script>
@@ -1027,6 +1045,10 @@ async function load(){
     document.getElementById('techniques').textContent=d.coverage_stats?.total_techniques||0;
     document.getElementById('coverage').textContent=(d.coverage_stats?.coverage_percentage||0)+'%';
     const s=d.coverage_stats||{};
+    if((s.partial||0)+(s.not_covered||0) > 0){
+      document.getElementById('ghost-gap-line').innerHTML =
+        "You're tracking "+(s.total_techniques||0)+" techniques \u2014 <b>"+(s.partial||0)+" partially covered, "+(s.not_covered||0)+" with no coverage.</b>";
+    }
     document.getElementById('summary').innerHTML=`
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:8px">
         <div>Covered: <strong style="color:var(--green)">${s.covered||0}</strong></div>
@@ -1063,6 +1085,11 @@ _SENTINEL_HTML = """<!DOCTYPE html>
   .badge.yellow{background:rgba(210,153,34,.15);color:var(--yellow)}
   .pro-gate{background:rgba(227,109,46,.05);border:1px dashed rgba(227,109,46,.3);border-radius:8px;padding:16px;text-align:center;margin-top:16px}
   .suite-link{color:var(--muted);font-size:12px;text-decoration:none;padding:4px 10px;border:1px solid var(--border);border-radius:4px}
+  .plat-brand{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--text);
+    letter-spacing:.02em;padding-right:14px;margin-right:4px;border-right:1px solid var(--border)}
+  .plat-brand .glyph{color:var(--accent);font-weight:800}
+  .suite-link.locked{opacity:.5;cursor:default;position:relative}
+  .suite-link.cur{color:var(--text);border-color:var(--accent)}
   table{width:100%;border-collapse:collapse;font-size:13px}
   th{text-align:left;color:var(--muted);padding:8px;border-bottom:1px solid var(--border)}
   td{padding:8px;border-bottom:1px solid rgba(48,54,61,.5)}
@@ -1072,9 +1099,12 @@ _SENTINEL_HTML = """<!DOCTYPE html>
 <header>
   <h1>🔒 SENTINEL SCORE</h1>
   <span style="color:var(--muted);font-size:12px">Security Evidence &amp; Network Threat Intelligence · Community</span>
-  <span style="margin-left:auto;display:flex;gap:12px">
+  <span style="margin-left:auto;display:flex;gap:10px;align-items:center">
+    <span class="plat-brand">ByTE X Bit Platform</span>
     <a href="/pila" class="suite-link">⚔ PILA</a>
+    <span class="suite-link locked" title="CODE is a Professional module">🔒 CODE</span>
     <a href="/ghost" class="suite-link">👻 GHOST</a>
+    <a href="/sentinel" class="suite-link cur">🔒 SENTINEL</a>
   </span>
 </header>
 <!-- DEMO_BANNER -->
@@ -1097,8 +1127,9 @@ _SENTINEL_HTML = """<!DOCTYPE html>
 </div>
 <div class="pro-gate">
   <div style="font-size:32px;margin-bottom:8px">🔒</div>
-  <p style="color:var(--muted);font-size:13px">Evidence submission, score computation, evidence ledger, and score history require Professional Edition.</p>
-  <a href="https://byte-x-bit.com"><button style="background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;margin-top:8px">Upgrade to Professional</button></a>
+  <p style="color:var(--text);font-size:14px;font-weight:600;margin-bottom:6px" id="sentinel-gap-line">Community shows your score read-only.</p>
+  <p style="color:var(--muted);font-size:13px">Professional lets you submit evidence, see exactly what's driving each sub-score, and raise your rating with signed, defensible artifacts and full score history.</p>
+  <a href="https://byte-x-bit.com"><button style="background:var(--accent);color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:13px;font-weight:600;margin-top:8px">Unlock full SENTINEL →</button></a>
 </div>
 </main>
 <script>
@@ -1112,6 +1143,11 @@ async function load(){
     const tr=d.trust_rating||{};
     document.getElementById('ss-rating').textContent=`${tr.rating||'?'} — ${tr.label||''}`;
     const subs=d.sub_scores||{};
+    const zeroCount=Object.values(subs).filter(v=>(v.score||0)===0).length;
+    if(zeroCount>0){
+      document.getElementById('sentinel-gap-line').innerHTML =
+        "Your score is <b>"+ss+"</b> ("+(tr.rating||'?')+"). <b>"+zeroCount+" sub-score"+(zeroCount>1?"s are":" is")+" held at zero</b> because the evidence behind "+(zeroCount>1?"them":"it")+" is locked.";
+    }
     document.getElementById('sub-table').innerHTML=
       Object.entries(subs).map(([k,v])=>
         `<tr><td><strong>${k}</strong> ${v.label||''}</td>

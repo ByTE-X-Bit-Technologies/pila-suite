@@ -72,6 +72,17 @@ class ESReadClient:
                         {"range": {"@timestamp":
                                    {"gte": f"now-{window_seconds}s"}}},
                         {"exists": {"field": "rule.name"}},
+                        # a real detection involves a host — drops decoder/engine
+                        # events (Ethertype/stream anomalies) that carry no src IP
+                        {"exists": {"field": "source.ip"}},
+                        # only true IDS alerts, not Zeek weird/flow analysis events
+                        {"term": {"suricata.eve.event_type": "alert"}},
+                    ],
+                    "must_not": [
+                        # exclude Suricata engine/decoder noise, not real detections
+                        {"match_phrase": {"rule.category":
+                                          "Generic Protocol Command Decode"}},
+                        {"prefix": {"rule.name": "SURICATA "}},
                     ],
                 }
             },
